@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <title>Car Rent</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  background-image: url(images/4.jpg?auto=compress&cs=tinysrgb&h=650&w=940);
+  
+  /* control height of img */
+  min-height: 450px;
+  
+  /* center and scale img */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* add style to container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  max-width: 400px;
+  max-height: 600px;
+  padding: 26px;
+  background-color: rgb(250, 245, 245);
+  
+}
+
+/* input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* style for submit btn */
+.btn {
+  background-color: #f30c0c;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+.about-div{
+    width:100%;
+    height: auto;
+    padding: 1px;
+    background-color: #f0e5fc;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.blog-line{
+    position: relative;
+    width:150px;
+    height: 8px;
+    background-image: linear-gradient(-45deg,aqua,pink,aquamarine);
+    border-radius: 20px;
+    left:0px;
+}
+.blog-txt a{
+    text-decoration: none;
+    color:#f15;
+    font-size:30px;
+  font-weight:bolder;
+  font-family:'Cookie', cursive;
+}
+.about-div img{
+    width:360px;
+    height: 360px;
+    border-radius: 8px;
+    border:8px solid rgb(8, 8, 8);
+    display: inline;
+    margin-top: 10px;
+    box-shadow: 0 3px 10px 0 rgba(100,100,100,.7);
+    transition-duration: .5s;
+}
+
+.about-div img:hover{
+    transform: scale(0.8);
+}
+
+.about-txt{
+    width:60%;
+    height: auto;
+    font-size: 22px;
+    color:#333;
+    
+    line-height: 30px;
+}
+.about-txt a{
+    text-decoration: none;
+    font-size: 25px;
+    color:rgb(8, 8, 8);
+    margin-right: 20px;
+}
+@media screen and (max-width:768px){
+  
+.about-div{
+    width:100%;
+    height: auto;
+    padding: 0px;
+    background-color: #d4f8f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.about-div img{
+   
+    border-radius: 50%;
+    border:8px solid rgb(12, 12, 12);
+    display: inline;
+    margin-top: 10px;
+    box-shadow: 0 3px 10px 0 rgba(100,100,100,.7);
+    transition-duration: .5s;
+}
+
+.about-div img:hover{
+    transform: scale(1.1);
+}
+
+.about-txt{
+    width:80%;
+    height: auto;
+    font-size: 22px;
+    color:#333;
+    font-family: cursive;
+    line-height: 30px;
+}
+.about-txt a{
+    text-decoration: none;
+    font-size: 25px;
+    color:rgb(17, 16, 17);
+    margin-right: 20px;
+} 
+}
+footer{
+        background: #273f44;
+        color: #fff;
+        font-family: 'montserrat';
+      }
+      .logo2{
+        height:50px; 
+        margin:30px 20px 5px;
+      }
+
+      .content1{
+        margin:20px;
+        font-size: 16px;
+        line-height: 25px;
+        
+      }
+
+      .content2{
+        margin-top: 50px;
+        margin-left: 30px;
+        font-weight: bold;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        display: inline-block;
+        font-family: 'open sans';
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .icons{
+        margin-left: 14%;
+        margin-top: 4%;
+      }
+
+      .icons .icon-link{
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .footer2{
+        background: #333;
+        color: grey;
+        padding: 3px;
+        text-align: center;
+        font-family: 'open sans';
+      }
+      .navbar{
+      position: fixed;
+      width: 100%;
+      background: #23393d !important;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+      transition: .6s;
+      z-index: 10;
+    }
+
+    .logo-one{
+      height:50px; 
+      margin: 10px 50px 10px;
+    }
+
+    .navbar-nav{
+      font-family: 'montserrat';
+      font-weight: bold;
+    }
+
+    .nav-link{
+      margin-right: 10px;
+      color: #fff !important;
+    }
+
+    .nav-link:hover{
+      color: #F0c540 !important;
+    }
+
+    nav.sticky{
+      margin-right: 5px;
+    }
+
+    @media (max-width:768px){
+
+      .navbar{
+        z-index: 10;
+      }
+
+      .navbar-brand .logo-one{
+        margin-left: 5px !important;
+        height: 40px;
+      }
+
+      .icons{
+        margin-bottom: 1rem;
+      }
+
+    }
+    
+    </style>
+  </head>
+  <nav class="navbar navbar-expand-md navbar-light " style="background-color: #273f44;"> 
+    <a href="#" class="navbar-brand">
+        <img src="https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/motors_car_rental_logo.svg" height="50" alt="kissan">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            
+        </div>
+
+    
+        <div class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-item nav-link"></a>
+              <b><a href="index.html" class="nav-item nav-link"  style="color: white;">Home</a></b>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-item nav-link"></a>
+                <b><a href="#" class="nav-item nav-link"></a></b>
+                </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-item nav-link"></a>
+                <b><a href="book.html" class="nav-item nav-link" style="color: white;">Book Now</a></b>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-item nav-link"></a>
+                  <b><a href="#" class="nav-item nav-link"></a></b>
+                  </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-item nav-link"></a>
+                  <b><a href="#abo" class="nav-item nav-link" style="color: white;">About Us</a></b>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#" class="nav-item nav-link"></a></b>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#con" class="nav-item nav-link" style="color: white;">Contact Us</a></b>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-item nav-link"></a>
+                      <b><a href="#" class="nav-item nav-link"></a></b>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-item nav-link"></a>
+                      <b><a href="Register.html" class="nav-item nav-link" style="color: white;">Sign Up</a></b>
+                      </li>
+            
+        </div>
+    </div>
+</nav>
+  
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="10000">
+            <img src="images/ch2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-interval="2000">
+            <img src="images/use4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/use5.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="bg-img">
+        <form action="login.php" method="post">
+          <div class="container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+            
+            <button type="submit" class="btn" name="login">Login</button>
+          </div>
+        </form>
+      </div>
+      
+
+      <div class="about-div" id="abo">
+        <div class="blog-txt">
+            <center><strong><h1 style="color: rgb(5, 0, 10);">About Us</h1></strong></center>
+            <div class="blog-line"></div>
+        </div>
+        <img src="images/ab1.jpg">
+        <img src="images/ab2.jpg">
+        
+        <br>
+        <br>
+        <div class="about-txt">
+            <strong><p style="color: black;"> With many rental companies, you must be at least 21 years of age to rent a car, and any driver under 25 may have to pay a Young Driver Fee. Similarly, people aged 70+ may find some companies will charge a Senior Driver Fee, or may not rent to them at all.
+
+              So car rental for the under-25 or over-70 can be more expensive  which is one more reason to book with motors.com  as we work with all the big brands. Just check each car terms and conditions to see if your age would make any difference.Before you buy any car rental insurance, you should find out what coverage is provided by your credit card company, your homeowner renter policy, and your own car insurance. <br>
+               </p></strong>
+        </div>
+    </div>
+
+</div>
+
+
+<footer>
+  <div class="footer-top">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <a href="#">
+            <img class="logo2" src="https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/motors_car_rental_logo.svg" alt="logo two">
+          </a>
+          <p class="content1">
+            Best cars at low cost.
+          </p>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12" id="con">
+          <h6 class="content2">SOCIAL MEDIA</h6>
+          <div class="icons">
+            <a class="icon-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="icon-link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="icon-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="icon-link" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><br>
+            <i class="fa fa-envelope" aria-hidden="true"><span style="font-family: 'montserrat';">&nbsp;&nbsp;sovam121@gmail.com</span></i>
+            <i class="fa fa-envelope" aria-hidden="true"><span style="font-family: 'montserrat';">&nbsp;&nbsp;7991079624</span></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer2">
+      &copy;2020 <span style="font-family: 'montserrat';">Motors.</span>
+      All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>
